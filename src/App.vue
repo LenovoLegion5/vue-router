@@ -1,12 +1,21 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <button @click="back">GO BACK</button>
     </nav>
-    <router-view/>
+    <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    back: function () {
+      this.$router.back(-1);
+    },
+  },
+};
+</script>
 
 <style>
 #app {

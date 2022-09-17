@@ -1,10 +1,15 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+// require("dotenv").config();
 
-Vue.config.productionTip = false
+import VueToastify from "vue-toastify";
+Vue.use(VueToastify);
+Vue.config.productionTip = false;
 
 new Vue({
   router,
-  render: h => h(App)
-}).$mount('#app')
+  store,
+  render: (h) => h(App),
+}).$mount("#app");
